@@ -10,6 +10,7 @@ import emailInputPick from '../InputPicks/email.svg';
 import phoneInputPick from '../InputPicks/phone-call.svg';
 import userInputPick from '../InputPicks/user.svg';
 import '../../node_modules/antd/dist/antd.css';
+import si from './ReviewPage.module.css';
 // import './ReviewPage.css';
 
 const ReviewPage = () => {
@@ -32,6 +33,7 @@ const ReviewPage = () => {
     const onFormLayoutChange = ({ size }) => {
         setComponentSize(size);
     };
+
     return (
         <div>
             <Form
@@ -53,8 +55,14 @@ const ReviewPage = () => {
                 <Link>Скарга</Link>
                 <p>Назва гуртка</p>
                 <Form.Item label="Ім'я">
-                    <Input placeholder="Юра Март" />
-                    <img src={userInputPick} alt="userPick" style={{ width: "25px" }} />
+                    <Input placeholder="Юра Март"
+                        style={{
+                            "background-image": `url(${userInputPick})`,
+                            "background-repeat": "no-repeat",
+                            "background-position": "99%",
+                            "background-size": "1.1em"
+                        }}
+                    />
                 </Form.Item>
                 <Form.Item
                     label="Email"
@@ -69,12 +77,24 @@ const ReviewPage = () => {
                             message: 'Please input your E-mail!',
                         },
                     ]}>
-                    <Input placeholder="YuraMart@gmail.com" />
-                    <img src={emailInputPick} alt="emailPick" style={{ width: "30px" }} />
+                    <Input placeholder="YuraMart@gmail.com"
+                        style={{
+                            "background-image": `url(${emailInputPick})`,
+                            "background-repeat": "no-repeat",
+                            "background-position": "99%",
+                            "background-size": "1.1em"
+                        }}
+                    />
                 </Form.Item>
                 <Form.Item label="Телефон">
-                    <Input placeholder="+38 (095) 123 45 67" />
-                    <img src={phoneInputPick} alt="phonePick" style={{ width: "25px" }} />
+                    <Input placeholder="+38 (095) 123 45 67"
+                        style={{
+                            "background-image": `url(${phoneInputPick})`,
+                            "background-repeat": "no-repeat",
+                            "background-position": "99%",
+                            "background-size": "1.1em"
+                        }}
+                    />
                 </Form.Item>
                 <Form.Item name="rate" label="Оцінка">
                     <Rate />
