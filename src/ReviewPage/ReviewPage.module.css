@@ -1,26 +1,38 @@
-/* @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"); */
-/* body { margin: 30px; } */
-.search {
-    position: relative;
-    color: #aaa;
-    font-size: 16px;
+.form {
+    width: 50%;
+    background-color: white;
 }
 
-.sInput {
-    width: 250px;
-    height: 32px;
-
-    background: #fcfcfc;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+.inputPick {
+    background-repeat: no-repeat;
+    background-position: 99%;
+    background-size: 1.1em;
+    /* width: max-content; */
 }
 
-.sInput {
-    text-indent: 32px;
+.itemCenter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
-.spanImg {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+
+.btn:not(:hover),
+.btn {
+    background-color: darkorange;
+    border: darkorange;
+}
+
+.btn:hover {
+    background-color: rgb(241, 155, 25);
+}
+
+.btn:focus,
+.btn:active {
+    color: white;
+}
+.btnDisabled,
+.btnDisabled:hover {
+    background-color: rgba(110, 79, 17, 0.25);
+    border: rgba(110, 79, 17, 0.25);
+    cursor: not-allowed;
 }

@@ -35,13 +35,13 @@ const ReviewPage = () => {
     };
 
     return (
-        <div>
+        <div className={si.form}>
             <Form
                 labelCol={{
-                    span: 4,
+                    span: 7,
                 }}
                 wrapperCol={{
-                    span: 14,
+                    span: 11,
                 }}
                 layout="horizontal"
                 initialValues={{
@@ -50,18 +50,25 @@ const ReviewPage = () => {
                 // onValuesChange={onFormLayoutChange}
                 size={'large'}
             >
-                <h1>Залишити коментар</h1>
-                <Link>Коментар</Link>
-                <Link>Скарга</Link>
-                <p>Назва гуртка</p>
-                <Form.Item label="Ім'я">
+                <h1 className={si.itemCenter}>Залишити коментар</h1>
+                <p className={si.itemCenter}>
+                    <Link>Коментар</Link>
+                    <Link>Скарга</Link>
+                </p>
+                <p className={si.itemCenter}>Назва гуртка</p>
+                <Form.Item
+                    label="Ім'я"
+                    name="name"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your name!',
+                        }
+                    ]}
+                >
                     <Input placeholder="Юра Март"
-                        style={{
-                            "background-image": `url(${userInputPick})`,
-                            "background-repeat": "no-repeat",
-                            "background-position": "99%",
-                            "background-size": "1.1em"
-                        }}
+                        className={si.inputPick}
+                        style={{ "background-image": `url(${userInputPick})` }}
                     />
                 </Form.Item>
                 <Form.Item
@@ -70,30 +77,36 @@ const ReviewPage = () => {
                     rules={[
                         {
                             type: 'email',
-                            message: 'The input is not valid E-mail!',
+                            message: 'The input is not valid e-mail!',
                         },
                         {
                             required: true,
-                            message: 'Please input your E-mail!',
-                        },
-                    ]}>
+                            message: 'Please input your e-mail!',
+                        }
+                    ]}
+                >
                     <Input placeholder="YuraMart@gmail.com"
-                        style={{
-                            "background-image": `url(${emailInputPick})`,
-                            "background-repeat": "no-repeat",
-                            "background-position": "99%",
-                            "background-size": "1.1em"
-                        }}
+                        className={si.inputPick}
+                        style={{ "background-image": `url(${emailInputPick})` }}
                     />
                 </Form.Item>
-                <Form.Item label="Телефон">
+                <Form.Item
+                    label="Телефон"
+                    name="phone"
+                    rules={[
+                        {
+                            pattern: /^[+]?[0-9]{2}[ ]?[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/,
+                            message: 'The input is not valid phone number!',
+                        },
+                        {
+                            required: true,
+                            message: 'Please input your phone number!',
+                        }
+                    ]}
+                >
                     <Input placeholder="+38 (095) 123 45 67"
-                        style={{
-                            "background-image": `url(${phoneInputPick})`,
-                            "background-repeat": "no-repeat",
-                            "background-position": "99%",
-                            "background-size": "1.1em"
-                        }}
+                        className={si.inputPick}
+                        style={{ "background-image": `url(${phoneInputPick})` }}
                     />
                 </Form.Item>
                 <Form.Item name="rate" label="Оцінка">
@@ -103,7 +116,7 @@ const ReviewPage = () => {
                     <Input.TextArea placeholder="Додайте опис" />
                 </Form.Item>
                 <Form.Item label="">
-                    <Button type="primary" htmlType="submit">Надіслати</Button>
+                    <Button className={si.btnDisabled} disabled type="primary" htmlType="submit">Надіслати</Button>
                 </Form.Item>
             </Form>
 
@@ -117,7 +130,7 @@ const ReviewPage = () => {
                 <p>Some contents...</p>
                 <p>Some contents...</p>
             </Modal> */}
-        </div >
+        </div>
     );
 }
 
