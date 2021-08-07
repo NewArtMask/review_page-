@@ -50,12 +50,12 @@ const ReviewPage = () => {
                 // onValuesChange={onFormLayoutChange}
                 size={'large'}
             >
-                <h1 className={si.itemCenter}>Залишити коментар</h1>
+                <h1 className={`${si.itemCenter} ${si.h1}`}>Залишити коментар</h1>
                 <p className={si.itemCenter}>
                     <Link>Коментар</Link>
                     <Link>Скарга</Link>
                 </p>
-                <p className={si.itemCenter}>Назва гуртка</p>
+                <p className={`${si.itemCenter}`}>Назва гуртка</p>
                 <Form.Item
                     label="Ім'я"
                     name="name"

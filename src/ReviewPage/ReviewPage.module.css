@@ -1,13 +1,14 @@
 .form {
     width: 35%;
     background-color: white;
+    border-radius: 16px;
 }
 
 .inputPick {
     background-repeat: no-repeat;
     background-position: 99%;
     background-size: 1.1em;
-    /* width: max-content; */
+    border-radius: 6px;
 }
 
 .itemCenter {
@@ -16,11 +17,18 @@
     gap: 10px;
 }
 
+.h1 {
+    color: #002766;
+    font-size: 2em;
+    font-weight: 700;
+}
+
 .btn:not(:hover),
 .btn {
     background-color: darkorange;
     border: darkorange;
-    margin-left: 95%;
+    margin-left: 65%;
+    border-radius: 6px;
 }
 
 .btn:hover {
