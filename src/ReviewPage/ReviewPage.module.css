@@ -1,4 +1,5 @@
 .form {
+    padding: 2% 0 1% 0;
     width: 35%;
     background-color: white;
     border-radius: 16px;
@@ -11,6 +12,10 @@
     border-radius: 6px;
 }
 
+.textArea {
+    border-radius: 6px;
+}
+
 .itemCenter {
     display: flex;
     justify-content: center;
@@ -18,15 +23,37 @@
 }
 
 .h1 {
-    color: #002766;
+    color: #2d4c68;
     font-size: 2em;
     font-weight: 700;
 }
 
+.clubTitle {
+    color: #3f6aa9;
+    font-size: 1.2em;
+    font-weight: 650;
+}
+
+.link:hover {
+    color: #858484;
+}
+
+.link {
+    color: #999999;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.link:focus,
+.link:active {
+    color: #fa8f1d;
+    text-decoration: underline;
+}
+
 .btn:not(:hover),
 .btn {
-    background-color: darkorange;
-    border: darkorange;
+    background-color: #fa8c16;
+    border: #fa8c16;
     margin-left: 65%;
     border-radius: 6px;
 }
@@ -41,7 +68,9 @@
 }
 .btnDisabled,
 .btnDisabled:hover {
-    background-color: rgba(110, 79, 17, 0.25);
-    border: rgba(110, 79, 17, 0.25);
+    background-color: #fdd1a2;
+    border: #fdd1a2;
+    margin-left: 65%;
+    border-radius: 6px;
     cursor: not-allowed;
 }

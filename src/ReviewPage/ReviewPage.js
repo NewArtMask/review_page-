@@ -52,10 +52,10 @@ const ReviewPage = () => {
             >
                 <h1 className={`${si.itemCenter} ${si.h1}`}>Залишити коментар</h1>
                 <p className={si.itemCenter}>
-                    <Link>Коментар</Link>
-                    <Link>Скарга</Link>
+                    <Link to="/" className={`${si.link}`}>Коментар</Link>
+                    <Link className={`${si.link}`}>Скарга</Link>
                 </p>
-                <p className={`${si.itemCenter}`}>Назва гуртка</p>
+                <p className={`${si.itemCenter} ${si.clubTitle}`}>Назва гуртка</p>
                 <Form.Item
                     label="Ім'я"
                     name="name"
@@ -113,10 +113,10 @@ const ReviewPage = () => {
                     <Rate />
                 </Form.Item>
                 <Form.Item name={['user', 'introduction']} label="Опис">
-                    <Input.TextArea placeholder="Додайте опис" />
+                    <Input.TextArea className={si.textArea} placeholder="Додайте опис" />
                 </Form.Item>
                 <Form.Item>
-                    <Button className={si.btn} type="primary" htmlType="submit">Надіслати</Button>
+                    <Button className={`${si.btn} ${si.btnDisabled}`} type="primary" htmlType="submit">Надіслати</Button>
                 </Form.Item>
             </Form>
 
