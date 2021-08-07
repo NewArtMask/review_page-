@@ -1,5 +1,5 @@
 .form {
-    width: 50%;
+    width: 35%;
     background-color: white;
 }
 
@@ -20,6 +20,7 @@
 .btn {
     background-color: darkorange;
     border: darkorange;
+    margin-left: 95%;
 }
 
 .btn:hover {

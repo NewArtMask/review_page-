@@ -38,10 +38,10 @@ const ReviewPage = () => {
         <div className={si.form}>
             <Form
                 labelCol={{
-                    span: 7,
+                    span: 6,
                 }}
                 wrapperCol={{
-                    span: 11,
+                    span: 15,
                 }}
                 layout="horizontal"
                 initialValues={{
@@ -115,8 +115,8 @@ const ReviewPage = () => {
                 <Form.Item name={['user', 'introduction']} label="Опис">
                     <Input.TextArea placeholder="Додайте опис" />
                 </Form.Item>
-                <Form.Item label="">
-                    <Button className={si.btnDisabled} disabled type="primary" htmlType="submit">Надіслати</Button>
+                <Form.Item>
+                    <Button className={si.btn} type="primary" htmlType="submit">Надіслати</Button>
                 </Form.Item>
             </Form>
 
